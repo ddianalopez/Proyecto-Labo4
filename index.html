@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Calcular temperatura por tu ubicación</h1>
+        <div id="localization">
+        </div>
+        <button onclick="calcularLocal()">
+            Calcular
+        </button>
+    </div>
+
+    <h1>Temperatura por provincia</h1>
+    <label for="province">Elegí una provincia</label>
+
+    <select id="province" onclick=changeSelectedProvince()>
+        <option value="Buenos_Aires" latitude="-34.6118" longitude="-58.4173">Buenos Aires</option>
+        <option value="Catamarca" latitude="-28.4696" longitude="-65.7843">Catamarca</option>
+        <option value="Chaco" latitude="-27.4516" longitude="-58.9861">Chaco</option>
+        <option value="Chubut" latitude="-43.2934" longitude="-65.1023">Chubut</option>
+        <option value="Cordoba" latitude="-31.4201" longitude="-64.1888">Cordoba</option>
+        <option value="Corrientes" latitude="-27.4806" longitude="-58.8341">Corrientes</option>
+        <option value="Entre_Rios" latitude="-32.4846" longitude="-58.2346">Entre Rios</option>
+        <option value="Formosa" latitude="-26.1876" longitude="-58.2395">Formosa</option>
+        <option value="Jujuy" latitude="-24.1858" longitude="-65.2995">Jujuy</option>
+        <option value="La_Pampa" latitude="-36.6141" longitude="-64.2824">La Pampa</option>
+        <option value="La_Rioja" latitude="-29.4110" longitude="-66.8505">La Rioja</option>
+        <option value="Mendoza" latitude="-32.8895" longitude="-68.8458">Mendoza</option>
+        <option value="Misiones" latitude="-27.3621" longitude="-55.9009">Misiones</option>
+        <option value="Neuquen" latitude="-38.9516" longitude="-68.0591">Neuquen</option>
+        <option value="Rio_Negro" latitude="-40.8150" longitude="-63.0000">Rio Negro</option>
+        <option value="Salta" latitude="-24.7821" longitude="-65.4121">Salta</option>
+        <option value="San_Juan" latitude="-31.5375" longitude="-68.5364">San Juan</option>
+        <option value="San_Luis" latitude="-33.3016" longitude="-66.3378">San Luis</option>
+        <option value="Santa_Cruz" latitude="-51.6226" longitude="-69.2322">Santa Cruz</option>
+        <option value="Santa_Fe" latitude="-31.6107" longitude="-60.6900">Santa Fe</option>
+        <option value="Santiago_del_Estero" latitude="-27.7825" longitude="-64.2591">Santiago del Estero</option>
+        <option value="Tierra_del_Fuego" latitude="-54.8019" longitude="-68.3020">Tierra del Fuego</option>
+        <option value="Tucuman" latitude="-26.8083" longitude="-65.2176">Tucuman</option>
+        <option value="Ciudad_Autonoma_de_Buenos_Aires" latitude="-34.6118" longitude="-58.4173">Ciudad de Buenos Aires
+        </option>
+
+    </select>
+
+
+    <br>
+    <label for="Longitud">Longitud de provincia seleccionada: </label>
+    <div id="coordinates-selected-longitude">
+    </div>
+    <label for="Latitud">Latitud de provincia seleccionada: </label>
+    <div id="coordinates-selected-latitude"></div>
+    <button onclick="calcularPorProvincia()">Calcular</button>
+    <br>
+
+
+
+
+
+    <br>
+    <h1>RESULTADOS</h1>
+
+    <label for="Temperatura minima">Temperatura minima: </label>
+    <div id="min-temp">
+    </div>
+    <label for="Temperatura maxima">Temperatura maxima: </label>
+    <div id="max-temp">
+    </div>
+    <label for="Temperatura actual">Temperatura actual: </label>
+    <div id="temp">
+    </div>
+    <label for="Humedad">Humedad: </label>
+    <div id="humidity">
+    </div>
+    <label for="Ciudad">Ciudad: </label>
+    <div id="state">
+    </div>
+
+
+
+    <div>
+
+
+
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

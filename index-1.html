@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://api.opencagedata.com/cage.min.js?key=d55b86b23dea4fe7b677707da699cffa"></script>
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Weather App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02"
+                aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample02">
+
+                <div class="container row g-3 justify-content-end align-items-center">
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="locationInput" placeholder="Ingresa una ubicación">
+                        <div id="autocomplete-suggestions" class="dropdown-menu dropdown-menu-dark show"></div>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-primary" onclick="geocodeLocation()">Buscar Ubicación</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="geocodingResults">
+        <div class="contenedor-ciudad">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div id="state"></div>
+        </div>
+
+        <div id="temp"></div>
+        <div class="contenedor-valores">MÍN:
+            <div id="min-temp">
+            </div>
+        </div>
+        <i id="icon-temp-act"></i>
+        <div class="contenedor-valores">MÁX:
+            <div id="max-temp">
+            </div>
+        </div>
+
+        <div class="contenedor-valores">Humedad:
+            <div id="humidity">
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <section class="seccion-5dias">
+        <h2 class="titulo-secundario">Próximos 5 días</h2>
+
+        <div id="weatherInfo" class="container row">
+        </div>
+
+    </section>
+
+</body>
+<script src="script-1.js"></script>
+
+
+</html>
